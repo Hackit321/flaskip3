@@ -1,16 +1,18 @@
 import os
 
-class Config:
+class Development:
+    DEBUG=True
+    TESTING =False
 
 
 
-class prodConfig:
+class Testing:
+    DEBUG=True
+    TESTING =False
 
 
-
-class DevConfig(Config):
-
-    DEBUG =True
-    
+app_config ={
+    'development': Development
 
 
+}
