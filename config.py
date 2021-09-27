@@ -1,18 +1,19 @@
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
-class Development:
-    DEBUG=True
-    TESTING =False
-
-
-
-class Testing:
-    DEBUG=True
-    TESTING =False
+class Config:
 
 
-app_config ={
-    'development': Development
+class ProdConfig(Config):
 
 
+
+class DevConfig(Config):
+
+
+
+config_options = {
+    'development':DevConfig,
+    'production':ProdConfig
 }
