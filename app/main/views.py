@@ -1,8 +1,10 @@
-from app.main.forms import CommentForm, PitchForm
-from app.models import Comment, Pitch
+from app.main.forms import CommentForm, PitchForm, UpdateProfile
+from app.models import Comment, Downvote, Pitch, Upvote
 from flask import render_template, redirect, url_for,abort,request
 from . import main
+from ..models import User,Pitch,Comment,Upvote,Downvote
 from flask_login import login_required,current_user
+from ..import db,photos
 
 
 
